@@ -52,8 +52,9 @@ public class OffersController
   {
     if (result.hasErrors ())
       return "createoffer";
-    else
-      return "offercreated";
+    
+    offersService.createOffer (offer);
+    return "offercreated";
   }
 
   @RequestMapping("/createoffer")
