@@ -1,7 +1,8 @@
 package com.zombymatthew.spring.web.dao;
 
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
+import com.zombymatthew.spring.web.validation.ValidEmail;
 
 public class Offer
 {
@@ -10,7 +11,8 @@ public class Offer
   @Size(min=5, max=100, message="Name must be between 5 and 100 characters")
   private String name;
   
-  @Pattern(regexp=".+\\@.+\\..+", message="Email not valid")
+  //@Pattern(regexp=".+\\@.+\\..+", message="Email not valid")
+  @ValidEmail
   private String email;
 
   @Size(min=20, max=255, message="Text must be between 20 and 255 characters")
