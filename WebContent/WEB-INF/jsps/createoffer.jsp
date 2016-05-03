@@ -5,29 +5,37 @@
 <html>
 <head>
 
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/static/css/main.css" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Offers</title>
 </head>
 <body>
-<form method="post" action="${pageContext.request.contextPath}/docreate"> 
-<table class="formtable">
-<tr>
-  <td class="label">Name: </td>  <td><input name="name" type="text"/></td>
-</tr>
-<tr>
-  <td class="label">Email: </td> <td><input name="email" type="text"/></td>
-</tr>
-<tr>
-  <td class="label">Your offer: </td> <td><textarea name="text" rows="10" cols="10"></textarea></td>
-</tr>
-<tr>
-  <td class="label"> </td> <td><input value="Create Offer" type="submit"/></td>
-</tr>
+	<form method="post"
+		action="${pageContext.request.contextPath}/docreate">
+		<table class="formtable">
+			<tr>
+				<td class="label">Name:</td>
+				<td><input name="name" type="text" /></td>
+			</tr>
+			<tr>
+				<td class="label">Email:</td>
+				<td><input name="email" type="text" /></td>
+			</tr>
+			<tr>
+				<td class="label">Your offer:</td>
+				<td><textarea name="text" rows="10" cols="10"></textarea></td>
+			</tr>
+			<tr>
+				<td class="label"></td>
+				<td><input value="Create Offer" type="submit" /></td>
+			</tr>
 
 
 
-</table>
+		</table>
 
-</form>
+	</form>
 </body>
 </html>
