@@ -58,18 +58,20 @@ public class OffersController
       {
         System.out.println ("Form does not validate: "+ error.getDefaultMessage ());
       }
+      return "createoffer";
     }
     else
     {
       System.out.println (offer); 
+      return "offercreated";
     }
-
-    return "offercreated";
   }
 
   @RequestMapping("/createoffer")
-  public String createOffer ()
+  public String createOffer (Model model)
   {
+    model.addAttribute ("offer", new Offer ());
+
     return "createoffer";
   }
 }
