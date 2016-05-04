@@ -29,7 +29,6 @@ public class OffersController
   @RequestMapping("/offers")
   public String showOffers (Model model)
   {
-    
     List<Offer> offers = offersService.getCurrent ();
 
     model.addAttribute ("offers", offers);
