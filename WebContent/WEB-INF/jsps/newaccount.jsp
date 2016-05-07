@@ -13,6 +13,7 @@
 <title>Create New User Account</title>
 </head>
 <body>
+  <h2>Create New User Account</h2>
   <sf:form method="post"
     action="${pageContext.request.contextPath}/createaccount" commandName="user">
     <table class="formtable">
