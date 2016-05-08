@@ -9,7 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <p><a href="${pageContext.request.contextPath}/offers"}>Show current offers</a></p>	
+  <p><a href="${pageContext.request.contextPath}/offers">Show current offers</a></p>	
   <p><a href="${pageContext.request.contextPath}/createoffer">Create a new offer</a></p>	
+  <p><a href="${pageContext.request.contextPath}/login">Log in</a></p>	
+  <p><a href="${pageContext.request.contextPath}/newaccount">Create a new account</a></p>	
 </body>
 </html>

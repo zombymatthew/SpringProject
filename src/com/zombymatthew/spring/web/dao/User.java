@@ -1,10 +1,28 @@
 package com.zombymatthew.spring.web.dao;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
+
+import com.zombymatthew.spring.web.validation.ValidEmail;
+
 public class User
 {
+  @NotBlank(message="Username cannot be blank.")
+  @Size(min=3, max=80, message="Username must be between 3 and 80 characters in length.")
+  @Pattern(regexp="^\\w{3,}$", message="Username can only consist of numbers, letters and ...")
   private String username;
+  
+  
+  @NotBlank(message="Password cannot be blank.") 
+  @Pattern(regexp="^\\S+$", message="Password must be at least 8 characters in length.")
+  @Size(min=8, max=80, message="Password must be at least 8 characters in length.")
   private String password;
+  
+  @ValidEmail
   private String email;
+
   private boolean enabled = false;
   private String authority;
 
