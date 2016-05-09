@@ -9,15 +9,15 @@ import com.zombymatthew.spring.web.validation.ValidEmail;
 
 public class User
 {
-  @NotBlank(message="Username cannot be blank.")
-  @Size(min=3, max=80, message="Username must be between 3 and 80 characters in length.")
-  @Pattern(regexp="^\\w{3,}$", message="Username can only consist of numbers, letters and ...")
+  @NotBlank()
+  @Size(min=3, max=80)
+  @Pattern(regexp="^\\w{3,}$")
   private String username;
   
   
-  @NotBlank(message="Password cannot be blank.") 
-  @Pattern(regexp="^\\S+$", message="Password must be at least 8 characters in length.")
-  @Size(min=8, max=80, message="Password must be at least 8 characters in length.")
+  @NotBlank() 
+  @Pattern(regexp="^\\S+$")
+  @Size(min=8, max=80)
   private String password;
   
   @ValidEmail

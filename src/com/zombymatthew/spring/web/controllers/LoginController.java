@@ -50,7 +50,7 @@ public class LoginController
     
     if (usersService.exists (user.getUsername ()))
     {
-      result.rejectValue ("username", "DuplicateKey.user.username", "Username " + user.getUsername () + " is already taken.");
+      result.rejectValue ("username", "DuplicateKey.user.username");
       return "newaccount";
     }
     
