@@ -8,13 +8,13 @@ public class Offer
 {
   private int id;
   
-  @Size(min=3, max=100, message="Name must be between 3 and 100 characters")
+  @Size(min=3, max=100)
   private String name;
   
   @ValidEmail
   private String email;
 
-  @Size(min=5, max=255, message="Text must be between 5 and 255 characters")
+  @Size(min=5, max=255)
   private String text;
   
   public Offer ()
