@@ -17,6 +17,11 @@
 	margin-left: 10px;
 }
 
+.error {
+  font-size: small;
+  color: green;
+  margin-left: 10px;
+}
 .loginerror {
 	color: red;
 	margin-left: 10px;
