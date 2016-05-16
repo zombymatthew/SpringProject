@@ -2,6 +2,8 @@
   pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -35,11 +37,11 @@
 
 		if (password1.length > 3 || password2.length > 3) {
 			if (password1 == password2) {
-				$("#passwordmessage").text("Passwords match");
+				$("#passwordmessage").text("<fmt:message key='MatchedPasswords.user.password'/>");
 				$("#passwordmessage").addClass("valid");
 				$("#passwordmessage").removeClass("error");
 			} else {
-				$("#passwordmessage").text("Passwords don't match");
+				$("#passwordmessage").text("<fmt:message key='UnmatchedPasswords.user.password'/>"); 
 				$("#passwordmessage").addClass("error");
 				$("#passwordmessage").removeClass("valid");
 			}
@@ -53,6 +55,8 @@
 <title>Create New User Account</title>
 </head>
 <body>
+<p/>
+
   <h2>Create New User Account</h2>
   <sf:form id="details" method="post" action="${pageContext.request.contextPath}/createaccount" commandName="user">
     <table class="formtable">
