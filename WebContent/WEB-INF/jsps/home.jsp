@@ -12,6 +12,12 @@
   <p><a href="${pageContext.request.contextPath}/offers">Show current offers</a></p>	
   <p><a href="${pageContext.request.contextPath}/createoffer">Create a new offer</a></p>	
   <p><a href="${pageContext.request.contextPath}/login">Log in</a></p>	
+
+  <c:url value="/logout" var="logoutUrl" />
+  <form action="${logoutUrl}" method="post">
+    <input name="logout" type="submit" value="Log Out" /> 
+    <input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}" />
+  </form>
   <p><a href="${pageContext.request.contextPath}/newaccount">Create a new account</a></p>	
 </body>
 </html>
